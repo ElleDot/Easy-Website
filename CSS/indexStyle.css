@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);  /* <-- Just for the demo, Yes I like pretty fonts... */
+
+.square {
+    float:left;
+    position: relative;
+    width: 15%;
+    padding-bottom : 15%; /* = width for a 1:1 aspect ratio */
+    background-color:#1E1E1E;
+    overflow:hidden;
+}
+
+.content {
+    position:absolute; /* Content is what is within each square */
+    height:90%;
+    width:90%;
+    padding: 5%; /* Don't forget 5% padding on all sides */
+    
+}
+
+.table{
+    display:table;
+    width:100%;
+    height:100%;
+}
+
+.table-cell{
+    display:table-cell;
+    vertical-align:middle;
+}
+
+
+/*  For responsive images */
+
+.content .rs{
+    width:25%;
+    height:auto;
+    max-height:90%;
+    max-width:100%;
+    transition: width 1s, height 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.left-image {
+	float:right;
+}
+
+.right-image {
+	float:left;
+}
+
+.top-table-cell {
+	vertical-align: bottom;
+	transition: 1s;
+}
+
+.bottom-table-cell {
+	vertical-align: top;
+}
+.table-cell:hover > .rs {
+    width:80%;
+    height:auto;
+	transition: width 1s, height 1s;
+	transition-timing-function: ease-in-out;
+}
+
+/*  For responsive images as background */
+
+.bg{
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+    color:#fff;
+}
+
+/*  following just for the demo */
+
+
+body {
+    font-size:20px;
+    font-family: 'Lato',verdana, sans-serif;
+    color: #fff;
+    text-align:center;
+    background:#1E1E1E;
+    margin: 0;
+}
+
+p{
+    margin:0;
+    padding:0;
+    text-align:left;
+}
+
+.numbers{
+    font-weight:900;
+    font-size:100px;
+}
+
+#bottom {
+	clear:both;
+    margin:0 1.66%;
+    width:89.68%;
+    padding: 3.5%;
+    background-color:#1E1E1E;
+    color: #fff;
+}
