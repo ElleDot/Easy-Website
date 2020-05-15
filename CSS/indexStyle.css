@@ -1,10 +1,32 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);  /* <-- Just for the demo, Yes I like pretty fonts... */
 
+
+#imageE, #imageA, #imageS, #imageY {
+	opacity: 0;
+	position:absolute;
+	left:0;
+	transition: opacity 1s ease-in-out;
+	width:100%;
+	height: 100%;
+}
+
+#GridContainer {
+	
+	width: 30%;
+	margin: auto;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+
 .square {
     float:left;
     position: relative;
-    width: 15%;
-    padding-bottom : 15%; /* = width for a 1:1 aspect ratio */
+    width: 50%;
+    padding-bottom : 50%; /* = width for a 1:1 aspect ratio */
     background-color:#1E1E1E;
     overflow:hidden;
 }
@@ -14,7 +36,6 @@
     height:90%;
     width:90%;
     padding: 5%; /* Don't forget 5% padding on all sides */
-    
 }
 
 .table{
@@ -23,57 +44,42 @@
     height:100%;
 }
 
-.table-cell{
-    display:table-cell;
-    vertical-align:middle;
-}
-
-
-/*  For responsive images */
-
 .content .rs{
-    width:25%;
-    height:auto;
-    max-height:90%;
-    max-width:100%;
-    transition: width 1s, height 1s;
+    width: 25%;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    transition: 1s;
     transition-timing-function: ease-in-out;
 }
 
 .left-image {
 	float:right;
+	cursor:pointer;
 }
 
 .right-image {
 	float:left;
+	cursor:pointer;
 }
 
 .top-table-cell {
+	display:table-cell;
 	vertical-align: bottom;
 	transition: 1s;
 }
 
 .bottom-table-cell {
+	display:table-cell;
 	vertical-align: top;
 }
-.table-cell:hover > .rs {
-    width:80%;
+
+.rs:hover {
+    width:90%;
     height:auto;
 	transition: width 1s, height 1s;
 	transition-timing-function: ease-in-out;
 }
-
-/*  For responsive images as background */
-
-.bg{
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
-    color:#fff;
-}
-
-/*  following just for the demo */
-
 
 body {
     font-size:20px;
@@ -82,24 +88,45 @@ body {
     text-align:center;
     background:#1E1E1E;
     margin: 0;
+	height: 100%;
 }
 
-p{
-    margin:0;
-    padding:0;
-    text-align:left;
+#footer {
+    text-align: center;
+	position: fixed;
+	padding-bottom: 2%;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+    color: #FFEFEF;
 }
 
-.numbers{
-    font-weight:900;
-    font-size:100px;
+/* IF THE USER IS ON A DEVICE WITHOUT A POINTER (TOUCHSCREEN), MAKE THE UI TOUCH-FRIENDLY */
+@media (pointer:none), (pointer:coarse) {
+	
+	#imageE, #imageA, #imageS, #imageY {
+		opacity: 0;
+		width: 0%;
+	}
+	
+	#GridContainer {
+		width: 50%;
+	}
+	
+	.rs, .left-image {
+		width:90%;
+		height:auto;
+	}
+	
 }
 
-#bottom {
-	clear:both;
-    margin:0 1.66%;
-    width:89.68%;
-    padding: 3.5%;
-    background-color:#1E1E1E;
-    color: #fff;
+@media screen and (max-width: 800px) {
+	
+	#GridContainer {
+		
+		width: 50%;
+		
+	}
+	
+
 }

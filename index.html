@@ -2,6 +2,7 @@
 <html>
 	
 	<head>
+		
 		<meta name="" />
 		<title>Take it Easy~</title>
 		<link href="CSS/indexStyle.css" rel="stylesheet" />
@@ -10,51 +11,63 @@
 	
 	<body>
 		
-		<div class="square" style="margin-left: 35%;margin-top: 10%;">
-		   <div class="content">
-		        <div class="table">
-		            <div class="table-cell top-table-cell">
-		                <img class="rs left-image" src="Assets/Initials/E.png"/>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<div class="square" style="margin-right: 35%;margin-top: 10%;">
-		    <div class="content">
-		        <div class="table">
-		            <div class="table-cell top-table-cell">
-		                <img class="rs right-image" src="Assets/Initials/A.png"/>
-		            </div>
-		        </div>
-		    </div>
-		</div>
+		<!-- These are the images which have their opacity changed on mouseover of EASY -->
+		<img id="imageE" src="Assets/Images/space.png" />
+		<img id="imageA" src="Assets/Images/sea.jpeg" />
+		<img id="imageS" src="Assets/Images/lapras.jpg" />
+		<img id="imageY" src="Assets/Images/city.jpg" />
 		
-		<!-- 2nd row responsive images in background with centered content -->
+		<div id="GridContainer">
 		
-		<div class="square" style="margin-left: 35%;margin-bottom: 10%;">
-		   <div class="content">
-		        <div class="table">
-		            <div class="table-cell bottom-table-cell">
-		                <img class="rs left-image" src="Assets/Initials/S.png"/>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<div class="square" style="margin-right: 35%;margin-bottom: 10%;">
-		    <div class="content">
-		        <div class="table">
-		            <div class="table-cell bottom-table-cell">
-		                <img class="rs right-image" src="Assets/Initials/Y.png"/>
-		            </div>
-		        </div>
-		    </div>
+			<div class="square" style="">
+			   <div class="content">
+			        <div class="table">
+			            <div class="top-table-cell">
+			                <img class="rs left-image" src="Assets/Initials/E.png" onclick="openElle()" onmouseover="imageEOn()" onmouseout="imageEOff()"/>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div class="square" style="">
+			    <div class="content">
+			        <div class="table">
+			            <div class="top-table-cell">
+			                <img class="rs right-image" src="Assets/Initials/A.png" onmouseover="imageAOn()" onmouseout="imageAOff()"/>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			
+			<!-- 2nd row responsive images in background with centered content -->
+			
+			<div class="square" style="">
+			   <div class="content">
+			        <div class="table">
+			            <div class="bottom-table-cell">
+			                <img class="rs left-image" src="Assets/Initials/S.png" onmouseover="imageSOn()" onmouseout="imageSOff()"/>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div class="square" style="">
+			    <div class="content">
+			        <div class="table">
+			            <div class="bottom-table-cell">
+			                <img class="rs right-image" src="Assets/Initials/Y.png" onmouseover="imageYOn()" onmouseout="imageYOff()"/>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		
 		</div>
 
 		<!-- END OF LAYOUT, following juts for the demo -->
 		
-		<!--<div id="bottom">
-		    <p>Generic Footer</p>
-		</div>-->
+		<div id="footer">
+		    <p>© EAS 2020</p>
+		</div>
+		
+		<script src="JS/index.js"></script>
 		
 	</body>
 	
