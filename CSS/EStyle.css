@@ -97,18 +97,26 @@ h1 {
 
 .EcurrentSection {
 	background-color: #bf8fa0;
+	transition: 1s;
 }
 
 .AcurrentSection {
 	background-color: #b682bf;
+	transition: 1s;
 }
 
 .ScurrentSection {
 	background-color: #4d5580;
+	transition: 1s;
 }
 
 .YcurrentSection {
 	background-color: #6f9bbf;
+	transition: 1s;
+}
+
+.buffer {
+	height: 50px;
 }
 
 #navBar {
@@ -117,6 +125,12 @@ h1 {
 	padding: 0;
 	overflow: hidden;
 	background-color: #1e1e1e;
+}
+
+#navBarContainer {
+	width: 100%;
+	height: 55px;
+	color: #ffffff;
 }
 
 li {

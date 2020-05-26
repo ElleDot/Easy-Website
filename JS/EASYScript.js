@@ -16,17 +16,17 @@ document.getElementById("premenudiv").style.height = screenheightpx;
 window.onscroll = function() {scrollFunction()};
 
 // Get the navbar & Segments
-var navbar = document.getElementById("navBar");
+var navbar = document.getElementById("navBarContainer");
 var ELink = document.getElementById("ELink");
 var ALink = document.getElementById("ALink");
 var SLink = document.getElementById("SLink");
 var YLink = document.getElementById("YLink");
 
 // Get heights of sections
-var EHeight = document.getElementById('EContent').offsetHeight;
-var AHeight = document.getElementById('AContent').offsetHeight;
-var SHeight = document.getElementById('SContent').offsetHeight;
-var YHeight = document.getElementById('YContent').offsetHeight;
+var EHeight = document.getElementById('EContent').offsetHeight + 50;
+var AHeight = document.getElementById('AContent').offsetHeight + 50;
+var SHeight = document.getElementById('SContent').offsetHeight + 50;
+var YHeight = document.getElementById('YContent').offsetHeight + 50;
 
 var i = 0;
 var i2 = 0;
@@ -92,41 +92,54 @@ function scrollFunction() {
     } else {
     	navbar.classList.remove("sticky");
     }
-
-	if (document.body.scrollTop >= (screenheight+50) || document.documentElement.scrollTop >= (screenheight+50)) {
-	    if (document.body.scrollTop >= (EHeight+screenheight+50) || document.documentElement.scrollTop >= (EHeight+screenheight+50)) {
-		    if (document.body.scrollTop >= (EHeight+AHeight+screenheight+50) || document.documentElement.scrollTop >= (EHeight+AHeight+screenheight+50)) {
-			    if (document.body.scrollTop >= (EHeight+AHeight+SHeight+screenheight+50) || document.documentElement.scrollTop >= (EHeight+AHeight+SHeight+screenheight+50)) {
-				    if (document.body.scrollTop >= (EHeight+AHeight+SHeight+YHeight+screenheight+50) || document.documentElement.scrollTop >= (EHeight+AHeight+SHeight+YHeight+screenheight+50)) {
-				    } else {
-				    	console.log("in Y Section");
-				    	SLink.classList.remove("ScurrentSection");
-				    	YLink.classList.add("YcurrentSection");
-				    }
-			    } else {
-			    	console.log("in S Section");
-			    	ALink.classList.remove("AcurrentSection");
-			    	SLink.classList.add("ScurrentSection");
-			    	YLink.classList.remove("YcurrentSection");
-			    }
-		    } else {
-		    	console.log("in A Section");
-		    	ELink.classList.remove("EcurrentSection");
-		    	ALink.classList.add("AcurrentSection");
-		    	SLink.classList.remove("ScurrentSection");
-		    }
-	    } else {
-	    	console.log("in E Section");
-	    	ELink.classList.add("EcurrentSection");
-	    	ALink.classList.remove("AcurrentSection");
-	    }
-	} else {
-		console.log("in start Section");
+	
+	if (document.documentElement.scrollTop < (screenheight+50)) {
 		ELink.classList.remove("EcurrentSection");
 		ALink.classList.remove("AcurrentSection");
 		SLink.classList.remove("ScurrentSection");
 		YLink.classList.remove("YcurrentSection");
+		navbar.classList.add("EcurrentSection");
+		navbar.classList.remove("AcurrentSection");
+		navbar.classList.remove("ScurrentSection");
+		navbar.classList.remove("YcurrentSection");
+	} else if (document.documentElement.scrollTop >= (screenheight+50) && (document.documentElement.scrollTop < (EHeight+screenheight+50))) {
+		ELink.classList.add("EcurrentSection");
+		ALink.classList.remove("AcurrentSection");
+		SLink.classList.remove("ScurrentSection");
+		YLink.classList.remove("YcurrentSection");
+		navbar.classList.add("EcurrentSection");
+		navbar.classList.remove("AcurrentSection");
+		navbar.classList.remove("ScurrentSection");
+		navbar.classList.remove("YcurrentSection");
+	} else if (document.documentElement.scrollTop >= (EHeight+screenheight+50) && (document.documentElement.scrollTop < (EHeight+AHeight+screenheight+50))) {
+		ELink.classList.remove("EcurrentSection");
+		ALink.classList.add("AcurrentSection");
+		SLink.classList.remove("ScurrentSection");
+		YLink.classList.remove("YcurrentSection");
+		navbar.classList.remove("EcurrentSection");
+		navbar.classList.add("AcurrentSection");
+		navbar.classList.remove("ScurrentSection");
+		navbar.classList.remove("YcurrentSection");
+	} else if (document.documentElement.scrollTop >= (EHeight+AHeight+screenheight+50) && (document.documentElement.scrollTop < (EHeight+AHeight+SHeight+screenheight+50))) {
+		ELink.classList.remove("EcurrentSection");
+		ALink.classList.remove("AcurrentSection");
+		SLink.classList.add("ScurrentSection");
+		YLink.classList.remove("YcurrentSection");
+		navbar.classList.remove("EcurrentSection");
+		navbar.classList.remove("AcurrentSection");
+		navbar.classList.add("ScurrentSection");
+		navbar.classList.remove("YcurrentSection");
+	} else if (document.documentElement.scrollTop >= (EHeight+AHeight+SHeight+screenheight+50)) {
+		ELink.classList.remove("EcurrentSection");
+		ALink.classList.remove("AcurrentSection");
+		SLink.classList.remove("ScurrentSection");
+		YLink.classList.add("YcurrentSection");
+		navbar.classList.remove("EcurrentSection");
+		navbar.classList.remove("AcurrentSection");
+		navbar.classList.remove("ScurrentSection");
+		navbar.classList.add("YcurrentSection");
 	}
+	
 }
 
 // Scroll to the point where the menu becomes sticky when trying to close CMD prompt
