@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta name="" />
+		<title>Easy~ | About Me</title>
+		<!-- inline JS if needed-->
+		<link href="../CSS/EStyle.css" rel="stylesheet" />
+	</head>
+	<body onload="typeWriter()">
+		
+		<!-- This is the floating menu on the right hand side of the screen, with 2 options -->
+	    <div id="socialMenu">
+			<div id="mySidenav" class="sidenav">
+				<div id="linkedinsocial" onclick="openLinkedIn()">
+					<img src="../Assets/Images/linkedinlogo.png" class="socialImage" alt="">
+					<p class="socialtext"><b>LinkedIn</b></p>
+				</div>
+				<div id="githubsocial" onclick="openGitHub()">
+					<img src="../Assets/Images/githublogo.png" class="socialImage" alt="">
+					<p class="socialtext" id="githubtext"><b>GitHub</b></p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- This is the CMD-looking window before the content of the page! -->
+		<div id="premenudiv">
+			<div id="baseCMDwindow">
+				<div id="CMDsidebyside">
+					<div id="CMDimage"><img src="../Assets/Images/cmdicon.png"/></div>
+					<div id="windowtitle" style="font-size:15px;">Administrator: Elosoft Portfolio</div>
+					<div>-</div>
+					<div>□</div>
+					<div id="closebutton" onclick="scrollToContent()">×</div>
+				</div>
+				<div id="CMDarea">
+					<h1 id="datelabel" class="CMDtext">Elosoft Windows [Version 26.1.2020]</h1>
+					<h1 class="CMDtext">(c) 2020 E Agars-Smith. All rights reserved.</h1>
+					<h1 id="typinglabel">C:\>_</h1>
+                    <h1 id="typinglabel2"></h1>
+					<br>
+				</div>
+			</div>
+				
+		</div>
+			
+		<ul id="navBar">
+			<li><a class="navBarLink" href="../index.html">Home</a></li>
+			<li><a class="navBarLink" id="ELink" href="#EContent"><img class="navBarImage" src="../Assets/Initials/E.png"/></a></li>
+			<li><a id="ALink"class="navBarLink" href="#AContent"><img class="navBarImage" src="../Assets/Initials/A.png"/></a></li>
+			<li><a id="SLink"class="navBarLink" href="#SContent"><img class="navBarImage" src="../Assets/Initials/S.png"/></a></li>
+			<li><a id="YLink"class="navBarLink" href="#YContent"><img class="navBarImage" src="../Assets/Initials/Y.png"/></a></li>
+			<li id="rightLink"><a class="navBarLink" href="../HTML/PrivacyPolicy.html">Privacy Policy</a></li>
+		</ul>
+		<div id="sneakydiv"></div>
+		
+		<!-- THE PAGE CONTENT STARTS HERE! -->
+		
+		<div id="EContent">
+			
+			<h1 id="Hello">Hello, I'm Elle._</h1>
+			<h2>I make digital things, check them out using the links above.</h2>
+			<h3>Or carry on scrolling to learn more about me!</h3>
+			<hr>
+			<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+			
+		</div>
+		<div id="AContent">
+
+			
+		</div>
+		<div id="SContent">
+
+		</div>
+		<div id="YContent">
+			
+
+		</div>
+
+		
+		<script src="../JS/EASYScript.js"></script>
+	</body>
+</html>

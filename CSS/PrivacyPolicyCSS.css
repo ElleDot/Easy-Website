@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Ubuntu|VT323&display=swap');
+
+/*
+	font-family: 'Comfortaa', cursive;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
+*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	background-color: #333333;
+}
+
+a, p, h1, h2, li {
+    color: white;
+    text-decoration: none;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 20px;
+}
+
+#pageTitle {
+	
+	font-size: 50px;
+	
+}
+
+h1 {
+	font-family: 'VT323', monospace;
+	font-size: 40px;
+}
+
+#currentPage {
+	background-color: #1E1E1E;
+}
+
+#navBar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #666666;
+	border-bottom: 5px solid #f8bbd0;
+}
+
+li {
+	float: left;
+	width: 16.6667%;
+	height: 50px;
+}
+
+.navBarLink {
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.5s;
+	padding-left: 25%;
+	padding-right: 25%;
+	display:flex;/*CSS3*/
+	align-items:center;/*Vertical align*/
+	justify-content:center;/*horizontal align*/
+	height:100%;
+}
+
+.navBarImage {
+	
+	max-width: 50%;
+	max-height: 40px;
+	
+	
+}
+
+#ELink:hover {
+	background-color: #f8bbd0;
+}
+
+#ALink:hover {
+	background-color: #ce93d8;
+}
+
+#SLink:hover {
+	background-color: #7986cb;
+}
+
+#YLink:hover {
+	background-color: #90caf9;
+}
+
+.bullets {
+	float: none;
+	display: list-item;
+	width:auto;
+}
+
+.nobullets {
+	display: list-item;
+	float:none;
+	width:auto;
+}
+
+h3, #policyTitle { 
+	
+	font-family: 'VT323', monospace;
+	font-size: 40px;
+	color: #dddddd;
+	
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+
+/* BEGINNING OF FLOATING RIGHT HAND MENU FOR SOCIALS :) */
+
+#socialMenu {
+	position: fixed;
+	right: 0;
+	top: 40%;
+	width: 8em;
+	margin-top: -2.5em;
+}
+
+#mySidenav div {
+	grid-template-columns: repeat(5, 1fr);
+	display: grid;
+	position: absolute;
+	right: -110px;
+	transition: 0.5s;
+	padding: 10px 0px 10px 10px;
+	width: 150px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	border-radius: 10px 0 0 10px;
+	box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#mySidenav div:hover {
+  right: 0; /* move items to the left, showing them on rollover*/
+  cursor: pointer; /* clicky clicky */
+}
+
+.socialtext {
+	color: #0E76A8;
+	margin: auto 6%;
+}
+
+#githubtext {
+	color: #EEEEEE;
+}
+
+#linkedinsocial {
+	top: 0px;
+	background-color: #DDDDDD; /* LinkedIn Blue */
+	height: 32px;
+	font-family: "Avenir Next", sans-serif
+}
+
+#githubsocial {
+	top: 64px;
+	background-color: #24292e; /* GitHub Grey */
+	height: 32px;
+	font-family: "Avenir Next", sans-serif
+}
+
+/* END OF SOCIAL MENU */
+
+#pageContent {
+	
+	margin: 0px 5%;
+	
+}
+
+/* IF THE USER IS ON A DEVICE WITHOUT A POINTER (TOUCHSCREEN), MAKE THE UI TOUCH-FRIENDLY */
+@media (pointer:none), (pointer:coarse) {
+	
+	
+}
+
+@media screen and (max-width: 1440px) {
+	
+	
+}

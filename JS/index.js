@@ -1,5 +1,17 @@
 function openElle() {
-	window.open("https://github.com/elledot", "_blank");
+	window.open("HTML/EASY.html#EContent", "_self");
+}
+
+function openApps() {
+	window.open("HTML/EASY.html#AContent", "_self");
+}
+
+function openStuff() {
+	window.open("HTML/EASY.html#SContent", "_self");
+}
+
+function openYearview() {
+	window.open("HTML/EASY.html#YContent", "_self");
 }
 			
 function imageEOn() {

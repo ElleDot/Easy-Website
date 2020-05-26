@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Ubuntu|VT323&display=swap');
+
+/*
+	font-family: 'Comfortaa', cursive;
+	font-family: 'Ubuntu', sans-serif;
+	font-family: 'VT323', monospace;
+*/
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	background-color: #333333;
+}
+
+a, p, h1, h2, h3 {
+    color: white;
+    text-decoration: none;
+    font-family: "Comfortaa", sans-serif;
+}
+
+#premenudiv {
+	color: #EEEEEE;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	background-image: url("../Assets/Images/win95.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:left top;
+}
+
+#baseCMDwindow {
+	grid-row: 2;
+	background-color: #ab85e7;
+	grid-column: 2;
+	border-radius: 5px;
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+#CMDsidebyside {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	height: 25px;
+	margin: 0px 10px -10px 10px;
+}
+
+#CMDsidebyside div img {
+	max-height: 90%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#CMDimage img {
+	padding-top: 5px;
+	
+}
+
+#windowtitle {
+	grid-column: 8 span;
+	padding-top: 5px;
+	font-family: 'Ubuntu', sans-serif;
+    text-decoration: none;
+}
+
+#CMDsidebyside div {
+	text-align: center;
+	line-height: 25px;
+	font-size: 25px;
+}
+
+#closebutton {
+	text-align: center;
+	background-color: #db6464;
+    cursor: pointer;
+}
+
+#closebutton:hover {
+    opacity: 0.5;
+}
+
+#CMDarea {
+	background-color: #000000;
+	margin: 0px 10px 10px 10px;
+    padding: 0px 10px 0px 10px;
+}
+
+.CMDtext {
+	color: #CCCCCC;
+}
+
+h1 {
+	font-family: 'VT323', monospace;
+}
+
+.EcurrentSection {
+	background-color: #bf8fa0;
+}
+
+.AcurrentSection {
+	background-color: #b682bf;
+}
+
+.ScurrentSection {
+	background-color: #4d5580;
+}
+
+.YcurrentSection {
+	background-color: #6f9bbf;
+}
+
+#navBar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #1e1e1e;
+}
+
+li {
+	float: left;
+	width: 16.6667%;
+	height: 50px;
+}
+
+.navBarLink {
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.5s;
+	padding-left: 25%;
+	padding-right: 25%;
+	display:flex;/*CSS3*/
+	align-items:center;/*Vertical align*/
+	justify-content:center;/*horizontal align*/
+	height:100%;
+}
+
+.navBarImage {
+	max-width: 50%;
+	max-height: 40px;
+}
+
+#ELink:hover {
+	background-color: #f8bbd0;
+	border-radius: 0px;
+}
+
+#ALink:hover {
+	background-color: #ce93d8;
+}
+
+#SLink:hover {
+	background-color: #7986cb;
+}
+
+#YLink:hover {
+	background-color: #90caf9;
+}
+
+#EContent {
+	background-color: #CCCCCC;
+}
+
+#AContent {
+	height: 1000px;
+	background-color: #888888;
+}
+
+#SContent {
+	height: 1000px;
+	background-color: #444444;
+}
+
+#YContent {
+	height: 1000px;
+	background-color: #000000;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+
+.absolute {
+	position: absolute;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+	padding-top: 60px;
+}
+
+/* BEGINNING OF FLOATING RIGHT HAND MENU FOR SOCIALS :) */
+
+#socialMenu {
+	position: fixed;
+	right: 0;
+	top: 40%;
+	width: 8em;
+	margin-top: -2.5em;
+}
+
+#mySidenav div {
+	grid-template-columns: repeat(5, 1fr);
+	display: grid;
+	position: absolute;
+	right: -110px;
+	transition: 0.5s;
+	padding: 10px 0px 10px 10px;
+	width: 150px;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	border-radius: 10px 0 0 10px;
+	box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#mySidenav div:hover {
+  right: 0; /* move items to the left, showing them on rollover*/
+  cursor: pointer; /* clicky clicky */
+}
+
+.socialtext {
+	color: #0E76A8;
+	margin: auto 6%;
+}
+
+#githubtext {
+	color: #EEEEEE;
+}
+
+#linkedinsocial {
+	top: 0px;
+	background-color: #DDDDDD; /* LinkedIn Blue */
+	height: 32px;
+	font-family: "Avenir Next", sans-serif
+}
+
+#githubsocial {
+	top: 64px;
+	background-color: #24292e; /* GitHub Grey */
+	height: 32px;
+	font-family: "Avenir Next", sans-serif
+}
+
+/* END OF SOCIAL MENU */
+
+#pageContent {
+	
+	margin: 0px 5%;
+	
+}
+
+#Hello {
+	font-size: 60px;
+	margin-bottom: 0px;
+}
+
+hr {
+	
+	width: 50%;
+	margin-left: 0;
+	
+}
+
+/* IF THE USER IS ON A DEVICE WITHOUT A POINTER (TOUCHSCREEN), MAKE THE UI TOUCH-FRIENDLY */
+@media (pointer:none), (pointer:coarse) {
+	
+	li a {
+		font-size: 30px;
+	}
+	
+}
+
+@media screen and (max-width: 1440px) {
+	
+	#premenudiv {
+		grid-template-columns: repeat(6, 1fr);
+	}
+	
+	#baseCMDwindow {
+	grid-column-start: 2; 
+	grid-column: span 4/6; 
+
+}
+	
+}
