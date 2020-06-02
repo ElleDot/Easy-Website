@@ -29,7 +29,7 @@ a, p, h1, h2, h3 {
 	background-image: url("../Assets/Images/win95.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position:left top;
+	background-position:left bottom;
 }
 
 #baseCMDwindow {
@@ -68,6 +68,7 @@ a, p, h1, h2, h3 {
 #CMDsidebyside div {
 	text-align: center;
 	line-height: 25px;
+	height: 25px;
 	font-size: 25px;
 }
 
@@ -85,14 +86,16 @@ a, p, h1, h2, h3 {
 	background-color: #000000;
 	margin: 0px 10px 10px 10px;
     padding: 0px 10px 0px 10px;
-}
-
-.CMDtext {
-	color: #CCCCCC;
+    height: 84%;
 }
 
 h1 {
 	font-family: 'VT323', monospace;
+}
+
+#datelabel, .CMDtext, #typinglabel, #typinglabel2 {
+	color: #CCCCCC;
+	font-size: 35px;
 }
 
 .EcurrentSection {
@@ -116,7 +119,7 @@ h1 {
 }
 
 .buffer {
-	height: 50px;
+	height: 100px;
 }
 
 #navBar {
@@ -175,22 +178,26 @@ li {
 }
 
 #EContent {
-	background-color: #CCCCCC;
+	margin: 0px 5% 0px 5%;
 }
 
 #AContent {
 	height: 1000px;
-	background-color: #888888;
 }
 
 #SContent {
 	height: 1000px;
-	background-color: #444444;
 }
 
 #YContent {
 	height: 1000px;
-	background-color: #000000;
+}
+
+.sectionHeaderImage {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	max-width: 50%;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -301,6 +308,6 @@ hr {
 	grid-column-start: 2; 
 	grid-column: span 4/6; 
 
-}
+	}
 	
 }

@@ -34,7 +34,7 @@ h1 {
 }
 
 #currentPage {
-	background-color: #1E1E1E;
+	background-color: #666666;
 }
 
 #navBar {
@@ -42,7 +42,7 @@ h1 {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #666666;
+	background-color: #1e1e1e;
 	border-bottom: 5px solid #f8bbd0;
 }
 
